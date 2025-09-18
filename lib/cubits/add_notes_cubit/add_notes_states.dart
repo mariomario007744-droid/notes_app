@@ -8,6 +8,5 @@ class AddNoteSuccess extends AddNoteState {}
 
 class AddNotefaliure extends AddNoteState {
   final String errMessage;
-
   AddNotefaliure(this.errMessage);
 }
