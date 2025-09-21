@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:note_app/const.dart';
 
 class CustomButtom extends StatelessWidget {
-  CustomButtom({required this.onTap});
+  CustomButtom({required this.onTap,this.isLoading=false});
+  final bool isLoading;
   final void Function() onTap;
   @override
   Widget build(BuildContext context) {
@@ -15,8 +16,8 @@ class CustomButtom extends StatelessWidget {
         ),
         width: MediaQuery.of(context).size.width,
         height: 55,
-        child: const Center(
-          child: Text(
+        child: Center(
+          child:isLoading?CircularProgressIndicator() :  Text(
             "Add",
             style: TextStyle(
               color: Colors.black,
